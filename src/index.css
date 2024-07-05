@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrap {
+    @apply grid place-items-center;
+  }
+
+  .title-center {
+    @apply text-2xl mb-4;
+  }
+
+  .desc {
+    @apply text-center w-[600px];
+  }
+
+  .form-wrap {
+    background: transparent;
+    padding: 35px 25px;
+    border-radius: 10px;
+  }
+
+  .border-alpha {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-pink {
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff007f;
+    border: 2px solid #ff007f;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.5s, box-shadow 0.5s, backround-color 0.5s;
+  }
+
+  .btn-pink:hover {
+    color: #fff;
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f,
+      0 0 80px #ff007f;
+    background-color: #ff007f;
+  }
+
+  .btn-pink::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #ff007f;
+    transform: skewX(35deg);
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  .btn-pink:hover::before {
+    width: 150%;
+  }
+
+  .btn-blue {
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #0000ee;
+    border: 2px solid #0000ee;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.5s, box-shadow 0.5s, backround-color 0.5s;
+  }
+
+  .btn-blue:hover {
+    color: #fff;
+    box-shadow: 0 0 10px #0000ee, 0 0 20px #0000ee, 0 0 40px #0000ee,
+      0 0 80px #0000ee;
+    background-color: #0000ee;
+  }
+
+  .btn-blue::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #0000ee;
+    transform: skewX(35deg);
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  .btn-blue:hover::before {
+    width: 150%;
+  }
+}
