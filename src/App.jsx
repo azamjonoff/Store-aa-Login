@@ -9,7 +9,16 @@ import {
 import RootLayout from "./layouts/RootLayout";
 
 //pages
-import { Home, About, Contact, Login, Register, ErrorPage } from "./pages";
+import {
+  Home,
+  About,
+  Contact,
+  Login,
+  Register,
+  ErrorPage,
+  SingleProduct,
+  Cart,
+} from "./pages";
 
 //components
 import ProtectedRoutes from "./components/ProtectedRoutes";
@@ -17,6 +26,10 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 // forms
 import { action as RegisterAction } from "./pages/Register";
 import { action as LoginAction } from "./pages/Login";
+
+// loader
+import { loader as HomeLoader } from "./pages/Home";
+import { loader as SingleProductLoader } from "./pages/SingleProduct";
 
 //context
 import { useGlobalContext } from "./hooks/useGlobalContext";
@@ -44,6 +57,7 @@ function App() {
         {
           index: true,
           element: <Home />,
+          loader: HomeLoader,
         },
         {
           path: "/about",
@@ -52,6 +66,15 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/singleProduct/:id",
+          element: <SingleProduct />,
+          loader: SingleProductLoader,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
         },
       ],
     },

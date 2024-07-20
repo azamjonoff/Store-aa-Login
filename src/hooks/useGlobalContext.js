@@ -6,7 +6,7 @@ export const useGlobalContext = () => {
 
   if (!context) {
     throw new Error(
-      "useGlobalContext() must be in the GlobalContextProvider()"
+      "useGlobalContext() must be use in the GlobalContextProvider()"
     );
   }
 
